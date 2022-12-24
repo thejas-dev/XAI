@@ -202,7 +202,7 @@ export default function Container() {
 						<div 
 						key={i}
 						ref={scrollRef}
-						className="chat mt-2 w-full bg-[#40414F]/30 md:bg-[#40414F]/20 flex p-[15px] rounded-xl md:gap-4 gap-2 items-center  ">
+						className="chat mt-2 w-full bg-[#40414F]/30 md:bg-[#40414F]/10 flex p-[15px] rounded-xl md:gap-4 gap-2 items-center  ">
 								<HiUserCircle className="h-10 w-10 text-blue-600"/>
 								<div className="message text-[#dcdcdc] max-w-[100%] overflow-x-scroll no-scrollbar whitespace-pre-wrap" >{chat.message}</div>
 						</div>
@@ -210,7 +210,7 @@ export default function Container() {
 					:
 						<div 
 						key={chat.uniqueId}
-						className="chat mb-2 mt-2 w-full bg-[#40414F]/80 flex p-[15px] rounded-xl gap-2">
+						className="chat mb-2 mt-2 w-full bg-[#40414F]/70 md:bg-[#40414F]/60 flex p-[15px] rounded-xl gap-2">
 							<img src="https://ik.imagekit.io/d3kzbpbila/openai-avatar_voSAMj2xG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671876198941"
 							alt=""
 							className="h-9 w-9 rounded-full"
