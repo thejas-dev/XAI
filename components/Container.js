@@ -53,10 +53,10 @@ export default function Container() {
 	const typeMessage = (element,text) =>{
 		let index=0;
 		const chatContainer =document.getElementById('chat_container');
+		scrollRef.current?.scrollIntoView({behaviour:"smooth"});
 		const interval = setInterval(()=>{
 			if(index<text.length){
 				element.innerHTML += text.charAt(index);
-				scrollRef.current?.scrollIntoView({behaviour:"smooth"});
 				// chatContainer.scrollTop = chatContainer.scrollHeight;
 				index++;
 			}else{
@@ -202,7 +202,7 @@ export default function Container() {
 						<div 
 						key={i}
 						ref={scrollRef}
-						className="chat w-full bg-[#40414F]/50 flex p-[15px] rounded-xl md:gap-4 gap-2 items-center  ">
+						className="chat mt-2 w-full bg-[#40414F]/30 flex p-[15px] rounded-xl md:gap-4 gap-2 items-center  ">
 								<HiUserCircle className="h-10 w-10 text-blue-600"/>
 								<div className="message text-[#dcdcdc] max-w-[100%] overflow-x-scroll no-scrollbar whitespace-pre-wrap" >{chat.message}</div>
 						</div>
